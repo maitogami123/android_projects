@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Modern Art UI</string>
+    <string-array name="layout_array">
+        <item>Linear Layout</item>
+        <item>Relative Layout</item>
+        <item>Table Layout</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
