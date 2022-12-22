@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4473c5"
+    >
+
+    <EditText
+        android:id="@+id/editTxtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="9dp"
+        android:background="#dbe2f5"
+        android:ems="10"
+        android:hint="What do you want to do?"
+        android:inputType="textPersonName"
+        android:paddingStart="8dp"
+        android:paddingTop="4dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="4dp" />
+
+    <EditText
+        android:id="@+id/editTxtDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="648dp"
+        android:layout_below="@+id/editTxtTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#dbe2f5"
+        android:gravity="top|start"
+        android:hint="Maybe describe your activity more precise ?"
+        android:inputType="textMultiLine"
+        android:paddingStart="6dp"
+        android:paddingLeft="6dp"
+        android:paddingTop="6dp"
+        android:paddingEnd="6dp"
+        android:paddingRight="6dp"
+        android:paddingBottom="6dp"
+        android:textColor="#000000"
+        android:textSize="14sp" />
+</RelativeLayout>
