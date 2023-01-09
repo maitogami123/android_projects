@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle(R.string.app_name);
     }
 
-    private class MyAsyncTask extends AsyncTask<String, Integer, Void> {
+    private class MyAsyncTask extends AsyncTask<String, Integer, ArrayList<BlogItem>> {
 
         @Override
         protected void onPreExecute() {
@@ -122,11 +122,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
         @Override
-        protected void onPostExecute(Void s) {
-            super.onPostExecute(s);
+        protected void onPostExecute(ArrayList<BlogItem>  blogItemList) {
+            super.onPostExecute(blogItemList);
             String appName = "RSS Feeds" + " - " + selectedTitle;
             getSupportActionBar().setTitle(appName);
-            for (BlogItem item: blogArray) {
+            for (BlogItem item: blogItemList) {
                 blogTitle.add(item.getTitle());
             }
             ListView lv = (ListView) findViewById(R.id.list_view);
@@ -139,12 +139,11 @@ public class MainActivity extends AppCompatActivity {
             super.onProgressUpdate(values);
         }
 
-        int dots = 1;
         @Override
-        protected Void doInBackground(String... strings) {
+        protected ArrayList<BlogItem> doInBackground(String... strings) {
             obj = new HandleXml(strings[0]);
             blogArray = obj.fetchXML();
-            return null;
+            return blogArray;
         }
     }
 
